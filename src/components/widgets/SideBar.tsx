@@ -12,7 +12,7 @@ function Sidebar() {
     <>
       <div className="bg-app-bg lg:space-y-8 md:space-y-0 md:space-x-3 flex flex-col md:flex-row lg:flex-col">
         {/* first item */}
-        <div className="rounded-lg lg:max-h-60 md:max-h-52  lg:min-h-[8.5rem] md:min-h-[4.5rem] w-full md:w-60 bg-no-repeat bg-cover  bg-[url('https://toyan-product-feedback-app.vercel.app/suggestions/tablet/background-header.png')] flex flex-col justify-end  p-4">
+        <div className="rounded-lg lg:max-h-60 md:max-h-52  lg:min-h-[8.5rem] md:min-h-[4.5rem] w-full md:w-60 bg-no-repeat bg-cover  md:bg-[url('https://toyan-product-feedback-app.vercel.app/suggestions/tablet/background-header.png')] lg:bg-[url('https://toyan-product-feedback-app.vercel.app/suggestions/desktop/background-header.png')] flex flex-col justify-end  p-4">
           <div className="grid gap-1  lg:h-full lg:w-full ">
             <Typography variant="h5" className="text-white font-semibold">
               Frontend Mentor
