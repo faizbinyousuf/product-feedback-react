@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Saira:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
+/* @import "tailwindcss/preflight";
+@tailwind utilities; */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -9,6 +11,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-app-bg: var(--app-bg);
   --color-app-dark: var(--app-dark);
   --color-app-light: var(--app-light);
   --color-text-dark: var(--text-dark);
@@ -47,6 +50,9 @@
 }
 
 :root {
+  --font-size-h1: 2.5rem;
+  --font-color-primary: #1a202c;
+  --app-bg: #f7f8fd;
   --app-dark: #1e3a8a;
   --app-light: #60a5fa;
   --text-dark: #1e3a8a;
@@ -84,8 +90,13 @@
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
 }
+.custom-heading {
+  font-size: var(-font-size-h1);
+  color: var(-font-color-primary);
+}
 
 .dark {
+  --app-bg: #f7f8fd;
   --app-dark: #1e3a8a;
   --app-light: #60a5fa;
   --text-dark: #1e3a8a;

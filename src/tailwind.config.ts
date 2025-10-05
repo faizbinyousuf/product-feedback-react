@@ -13,7 +13,7 @@ const config: Config = {
   //   ],
   //   content: ["./src/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
-
+  // content: ["./src/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   // content: ["./src/**/*.{js,ts,jsx,tsx}", "./public/index.html"], notes app config
   theme: {
     extend: {
@@ -53,7 +53,7 @@ const config: Config = {
       fontSize: {
         h1: ["2.25rem", { lineHeight: "2.5rem", fontWeight: "700" }],
         h2: ["1.875rem", { lineHeight: "2.25rem", fontWeight: "600" }],
-        body: ["1rem", { lineHeight: "1.5rem" }],
+        body: ["10rem", { lineHeight: "1.5rem" }],
       },
     },
   },

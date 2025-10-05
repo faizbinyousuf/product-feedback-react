@@ -17,16 +17,7 @@ function App() {
       children: [
         {
           index: true,
-          element: (
-            <HomePage
-              children={
-                <>
-                  <h1>Home</h1>
-                  <p>Home page</p>
-                </>
-              }
-            />
-          ),
+          element: <HomePage />,
         },
         // {
         //   path: "/home",
