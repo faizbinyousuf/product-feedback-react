@@ -25,7 +25,7 @@ function TopBar() {
   };
 
   return (
-    <div className=" md:rounded-lg md:h-20 h-16 bg-[#373E68] text-white flex items-center justify-between w-full px-5     ">
+    <div className=" md:rounded-lg md:h-20 h-16 bg-[#373E68] text-white flex items-center justify-between w-full px-5  py-5   ">
       <LightbulbIcon className="w-8 h-8 hidden md:block" />
       <Typography
         variant="h5"
@@ -61,7 +61,7 @@ function TopBar() {
               ].map((option) => (
                 <div key={option}>
                   <DropdownMenuItem onSelect={() => handleSelect(option)}>
-                    <div className="flex items-center justify-between w-full hover:cursor-pointer text-sm">
+                    <div className="flex items-center justify-between w-full hover:cursor-pointer text-sm  ">
                       {option}
                       {selectedFilter === option && (
                         <CheckIcon className="text-green-700" />
@@ -77,7 +77,7 @@ function TopBar() {
       </div>
       <Button
         variant={"ghost"}
-        className="bg-[#BC3FF1] font-semibold md:py-6 py-5 hover:cursor-pointer text-xs px-0"
+        className="bg-[#BC3FF1] font-semibold md:py-6 py-5 hover:cursor-pointer text-xs md:text-sm px-0"
       >
         <PlusIcon /> Add Feedback
       </Button>
