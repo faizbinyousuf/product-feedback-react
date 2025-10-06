@@ -6,15 +6,9 @@ import typography from "@tailwindcss/typography";
 
 const config: Config = {
   darkMode: "class",
-  //   content: [
-  //     "./src/**/*.{ts,tsx}", // catches src/pages, src/components, etc.
-  //     "./src/app/**/*.{ts,tsx}", // explicitly include app directory
-  //     "./components/**/*.{ts,tsx}", // if you also have a root-level components folder
-  //   ],
-  //   content: ["./src/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
-  // content: ["./src/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  // content: ["./src/**/*.{js,ts,jsx,tsx}", "./public/index.html"], notes app config
+
   theme: {
     extend: {
       colors: {
