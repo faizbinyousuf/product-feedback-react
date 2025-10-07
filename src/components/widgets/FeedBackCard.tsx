@@ -3,14 +3,18 @@ import { Typography } from "../ui/typography";
 import { ChevronUpIcon, MessageCircleIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { FeedbackModel } from "@/app/types/FeedbackModel";
+import { useNavigate } from "react-router-dom";
 interface Props {
   feedback: FeedbackModel;
+  shouldNavigate?: boolean;
 }
 
-function FeedBackCard({ feedback }: Props) {
+function FeedBackCard({ feedback, shouldNavigate }: Props) {
   //   const randomNumber = () => Math.floor(Math.random() * 100);
   const [upVote, setUpVote] = useState(feedback.upvotes);
   const [upVoteDone, setUpVoteDone] = useState(false);
+  const navigate = useNavigate();
+  //    navigate(`/noteDetail/${note.id}`);
 
   const handleUpVote = () => {
     setUpVote(upVote + 1);
@@ -40,22 +44,31 @@ function FeedBackCard({ feedback }: Props) {
           {feedback.upvotes}
         </Typography>
       </div>
-      <div className="  w-full">
-        <p className="text-gray-800 text-sm font-semibold mb-3">
-          {feedback.title}
-        </p>
-        <p className="text-gray-600 text-sm font-[500]">
-          {feedback.description}
-        </p>
-        <div className="rounded-md py-1 px-3 w-max h-max cursor-pointer   bg-[#F3F3FF]  text-[#4661E6]  my-3">
-          <Typography
-            variant="bodyText"
-            className="font-semibold text-sm text-[#4661E6]"
-          >
-            {feedback.category}
-          </Typography>
+      <div>
+        <div
+          onClick={() => {
+            if (shouldNavigate) {
+              navigate("/feedback-detail", { state: { feedback } });
+            }
+          }}
+          className="  w-full  "
+        >
+          <p className="text-gray-800 text-sm font-semibold mb-3">
+            {feedback.title}
+          </p>
+          <p className="text-gray-600 text-sm font-[500]">
+            {feedback.description}
+          </p>
+          <div className="rounded-md py-1 px-3 w-max h-max cursor-pointer   bg-[#F3F3FF]  text-[#4661E6]  my-3">
+            <Typography
+              variant="bodyText"
+              className="font-semibold text-sm text-[#4661E6]"
+            >
+              {feedback.category}
+            </Typography>
+          </div>
         </div>
-        <div className="flex md:hidden justify-between items-center">
+        <div className="flex md:hidden justify-between items-center ">
           <div
             onClick={() => handleUpVote()}
             className={cn(
@@ -84,7 +97,6 @@ function FeedBackCard({ feedback }: Props) {
           </div>
         </div>
       </div>
-
       {/* hide in mobile and show in tablet screens */}
       <div className="hidden md:flex gap-2 items-center w-16 shrink-0  ">
         <MessageCircleIcon className=" size-5  text-[#CDD2EF] fill-[#CDD2EF] bg-cover " />

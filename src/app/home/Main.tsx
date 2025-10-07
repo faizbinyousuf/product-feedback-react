@@ -10,7 +10,7 @@ function Main() {
       <TopBar />
       <div>
         {feedbackList.map((item, index) => (
-          <FeedBackCard key={index} feedback={item} />
+          <FeedBackCard key={index} feedback={item} shouldNavigate={true} />
         ))}
       </div>
     </div>

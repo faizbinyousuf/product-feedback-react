@@ -38,7 +38,7 @@ function TopBar() {
           Sort by
         </p>
 
-        <DropdownMenu open={open} onOpenChange={setOpen}>
+        <DropdownMenu open={open} onOpenChange={setOpen} modal={false}>
           <DropdownMenuTrigger asChild className="hover:cursor-pointer">
             <div className="flex items-center gap-1">
               <p className="font-semibold text-xs md:text-sm hover:cursor-pointer">

@@ -2,6 +2,7 @@ import Layout from "./components/common/Layout";
 import HomePage from "./app/home/HomePage";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import FeedbackDetail from "./app/home/FeedbackDetail";
 
 function App() {
   const router = createBrowserRouter([
@@ -19,28 +20,10 @@ function App() {
           index: true,
           element: <HomePage />,
         },
-        // {
-        //   path: "/home",
-        //   element: <HomePage />,
-        // },
-        // {
-        //   path: "/noteDetail/:id",
-        //   element: <NoteDetail />,
-
-        //   errorElement: <div>Note not found!</div>,
-        // },
-        // {
-        //   path: "/createNote",
-        //   element: <CreateNote />,
-        // },
-        // {
-        //   path: "/archived",
-        //   element: <Archived />,
-        // },
-        // {
-        //   path: "/settings",
-        //   element: <SettingsPage />,
-        // },
+        {
+          path: "/feedback-detail",
+          element: <FeedbackDetail />,
+        },
 
         {
           path: "*",
@@ -54,13 +37,7 @@ function App() {
     <>
       <>
         <React.StrictMode>
-          {/* <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme-2"> */}
-          {/* <FontProvider> */}
-          {/* <NotesContextProvider> */}
           <RouterProvider router={router} />
-          {/* </NotesContextProvider> */}
-          {/* </FontProvider> */}
-          {/* </ThemeProvider> */}
         </React.StrictMode>
       </>
     </>
