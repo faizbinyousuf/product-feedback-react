@@ -51,7 +51,8 @@ export const feedbackList: FeedbackModel[] = [
         replies: [
           {
             id: "1-1",
-            content: "Same here! I mostly code late at night.",
+            content:
+              "Same here! I mostly code late at night. This would be a great addition! My eyes hurt at night using the light theme. I would really appreciate this feature. Same here! I mostly code late at night. I would really appreciate this feature.",
             replyingTo: "johndoe",
             user: {
               id: "1",
