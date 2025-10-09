@@ -3,6 +3,7 @@ import HomePage from "./app/home/HomePage";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import FeedbackDetail from "./app/home/FeedbackDetail";
+import Roadmap from "./app/roadmap/Roadmap";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,6 +24,10 @@ function App() {
         {
           path: "/feedback-detail",
           element: <FeedbackDetail />,
+        },
+        {
+          path: "/roadmap",
+          element: <Roadmap />,
         },
 
         {

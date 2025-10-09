@@ -2,11 +2,13 @@ import { cn } from "@/lib/utils";
 import { Typography } from "../ui/typography";
 import { useState } from "react";
 import { Button } from "../ui/button";
+import { useNavigate } from "react-router-dom";
 
 function Sidebar() {
   const [selectedTag, setSelectedTag] = useState("All");
   const tags = ["All", "UI", "UX", "Enhancement", "Bug", "Other", "Feature"];
   const roadMaps = ["Planned", "In-Progress", "Live"];
+  const navigate = useNavigate();
 
   return (
     <>
@@ -64,8 +66,9 @@ function Sidebar() {
               Roadmap
             </Typography>
             <Button
+              onClick={() => navigate("/roadmap")}
               variant="link"
-              className="text-[#4661E6] font-semibold p-0 m-0"
+              className="text-[#4661E6] font-semibold p-0 m-0 cursor-pointer"
             >
               View
             </Button>

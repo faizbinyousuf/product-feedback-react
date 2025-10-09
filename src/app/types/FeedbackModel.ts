@@ -28,6 +28,16 @@ interface Reply {
   user: User;
 }
 
+export type Feature = {
+  id: number;
+  title: string;
+  description: string;
+  status: "Planned" | "In-Progress" | "Live";
+  category: string; // e.g. "Feature" or "Enhancement"
+  upvotes: number;
+  comments: number;
+};
+
 export const feedbackList: FeedbackModel[] = [
   {
     id: "1",
@@ -304,5 +314,37 @@ export const feedbackList: FeedbackModel[] = [
       name: "Elon Tusk",
       username: "elontusk",
     },
+  },
+];
+
+export const features: Feature[] = [
+  {
+    id: 1,
+    title: "More comprehensive reports",
+    description:
+      "It would be great to see a more detailed breakdown of solutions.",
+    status: "Planned",
+    category: "Feature",
+    upvotes: 123,
+    comments: 2,
+  },
+  {
+    id: 2,
+    title: "One-click portfolio generation",
+    description:
+      "Add ability to create professional looking portfolio from profile.",
+    status: "In-Progress",
+    category: "Feature",
+    upvotes: 62,
+    comments: 1,
+  },
+  {
+    id: 3,
+    title: "Add micro-interactions",
+    description: "Small animations at specific points can add delight.",
+    status: "Live",
+    category: "Enhancement",
+    upvotes: 71,
+    comments: 1,
   },
 ];

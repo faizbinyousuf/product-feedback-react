@@ -44,14 +44,14 @@ function FeedBackCard({ feedback, shouldNavigate }: Props) {
           {feedback.upvotes}
         </Typography>
       </div>
-      <div>
+      <div className=" w-full">
         <div
           onClick={() => {
             if (shouldNavigate) {
               navigate("/feedback-detail", { state: { feedback } });
             }
           }}
-          className="  w-full  "
+          className={cn("   w-full", shouldNavigate && "cursor-pointer")}
         >
           <p className="text-gray-800 text-sm font-semibold mb-3">
             {feedback.title}
