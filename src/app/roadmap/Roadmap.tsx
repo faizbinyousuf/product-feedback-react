@@ -3,7 +3,6 @@ import { ChevronLeftIcon, PlusIcon } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { features } from "../types/FeedbackModel";
-import { cn } from "@/lib/utils";
 
 function Roadmap() {
   const columns = ["Planned", "In-Progress", "Live"];
@@ -104,9 +103,9 @@ function Roadmap() {
           ))}
         </div> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6  py-6  min-h-screen">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6  py-6   min-h-screen">
           {grouped.map((group) => (
-            <div key={group.status} className="">
+            <div key={group.status}>
               <h2 className="text-lg font-semibold text-slate-800">
                 {group.status} ({group.items.length})
               </h2>
@@ -118,11 +117,11 @@ function Roadmap() {
                   : "Released features"}
               </p>
 
-              <div className="flex flex-col gap-4  p-3">
+              <div className="flex flex-col gap-4  ">
                 {group.items.map((item) => (
                   <div
                     key={item.id}
-                    className={`rounded-xl bg-white p-5 border-t-4 ${
+                    className={`rounded-xl bg-white p-5 border-t-4  ${
                       item.status === "Planned"
                         ? "border-orange-400"
                         : item.status === "In-Progress"

@@ -341,7 +341,8 @@ export const features: Feature[] = [
   {
     id: 3,
     title: "Add micro-interactions",
-    description: "Small animations at specific points can add delight.",
+    description:
+      "Small animations at specific points can add delight. Small animations at specific points can add delight. ",
     status: "Live",
     category: "Enhancement",
     upvotes: 71,
